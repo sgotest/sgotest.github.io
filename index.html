@@ -1414,6 +1414,15 @@ For verification: the email should be r*********.**t@gmail.com
     	var div = document.getElementById("beegBox");
     	div.style.display = div.style.display == "none" ? "block" : "none";
     }
+
+    function audioRapidfire(audiofile) {
+    	var audio1 = new Audio();
+    	var src1 = document.createElement("source");
+    	src1.type = "audio/ogg";
+    	src1.src = audiofile;
+    	audio1.appendChild(src1);
+    	audio1.play();
+    }
     
     
     window.onload = getPerms
@@ -1815,33 +1824,21 @@ For verification: the email should be r*********.**t@gmail.com
   <div id="audio-tests" class="flexy"><!-- START: Audio Tests -->
 <div>
 <h3>Left Channel</h3>
-<audio preload="auto" id="leftChannel">
-<source src="assets/left.ogg" type="audio/ogg">
-Your browser does not support the<code>audio</code> element.
-</audio>
-<button class="butty" onclick="document.getElementById('leftChannel').play()" tabindex="4">Play</button>
+<button class="butty" onclick="audioRapidfire('assets/left.ogg')" tabindex="4">Play</button>
 </div>
 
     <hr />
 
 <div>
 <h3>Both Channels</h3>
-<audio preload="auto" id="bothChannels">
-<source src="assets/both.ogg" type="audio/ogg">
-Your browser does not support the<code>audio</code> element.
-</audio>
-<button class="butty" onclick="document.getElementById('bothChannels').play()" tabindex="3">Play</button>
+<button class="butty" onclick="audioRapidfire('assets/both.ogg')" tabindex="3">Play</button>
 </div>
 
     <hr /> 
 
 <div>
 <h3>Right Channel</h3>
-<audio preload="auto" id="rightChannel">
-<source src="assets/right.ogg" type="audio/ogg">
-Your browser does not support the<code>audio</code> element.
-</audio>
-<button class="butty" onclick="document.getElementById('rightChannel').play()" tabindex="5">Play</button>
+<button class="butty" onclick="audioRapidfire('assets/right.ogg')" tabindex="5">Play</button>
 </div>
 </div><!-- END: Audio Tests -->
 
@@ -1852,9 +1849,9 @@ Your browser does not support the<code>audio</code> element.
 <h2>Keyboard Test - Surface Laptop Go 2/3</h2>
 <h6>don't forget to test the headphone jack or you will literally post cringe on the internet</h6>
 <div id="keyboard"><!-- START: Keyboard -->
-<div class="keyboard-main-area" style="border: 4px solid gray; display: inline-block;"><!-- START: Keyboard Main Area -->
+<div class="keyboard-main-area" style="border: 2px solid rgba(100,100,100,0.5); display: inline-block;"><!-- START: Keyboard Main Area -->
 
-<div class="keyboard-row" style="background:rgba(100,100,100,0.4);">
+<div class="keyboard-row" style="background:rgba(100,100,100,0.2);">
 <span class="key key-empty key-arrow" id="EscGhost"></span>
 <span class="key key-empty key-func"></span>
 <span class="key key-empty key-func"></span>
