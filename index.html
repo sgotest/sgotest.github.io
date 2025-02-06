@@ -1423,7 +1423,12 @@ For verification: the email should be r*********.**t@gmail.com
     	audio1.appendChild(src1);
     	audio1.play();
     }
-    
+    function copyThatText() {
+    	var copyText = document.getElementById("copyme");
+    	copyText[0].select();
+    	copyText[0].setSelectionRange(0,99999);
+    	navigator.clipboard.writeText(copyText.value);
+    }
     
     window.onload = getPerms
   </script>
@@ -1699,7 +1704,7 @@ For verification: the email should be r*********.**t@gmail.com
 
       <h6>
         Based off of <span style="text-decoration:underline dotted; color:blue" title="https://registerchromebook.github.io">this site</span>, which was based off of <span style="text-decoration:underline dotted;color: blue" title="https://chromebooktester.com/">this site</span><br>
-        <a href="C:/Users/livestudent4/battery-report.html">want your battery report?</a>
+        <button onclick="copyThatText()">click to copy battery report cmd</button><h6 id="copyme" style="display:none">wawa</h6>
       </h6>
     </div><!-- END: Page Title -->
 
